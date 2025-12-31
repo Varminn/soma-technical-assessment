@@ -111,30 +111,5 @@ Thanks for your time and effort. We'll be in touch soon!
 
 ---
 
-### Tech Notes
-
-* **Backend:** Next.js API routes, Prisma, SQLite
-* **Frontend:** Next.js (App Router), React, Tailwind CSS
-* **Data integrity** enforced at both API and UI levels
-* **Minimal design changes** to stay consistent with the original UI
-
----
-
 ### Screenshots / Demo
 
-*Add screenshots or a short screen recording here showing:*
-
-* Task creation with due dates and images
-* Dependency setup
-* Critical path highlighting
-* Dependency graph view
-
----
-
-If you want, I can also:
-
-* Compress this into a **shorter recruiter skim version**
-* Add a **TL;DR section at the top**
-* Help you choose **what screenshots to include** so it looks polished
-
-You’re in great shape for submission — this reads clean and professional.
