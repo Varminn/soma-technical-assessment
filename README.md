@@ -56,58 +56,85 @@ Thanks for your time and effort. We'll be in touch soon!
 
 ## Solution:
 
-1. Due Dates
+---
 
-Added optional due dates (with optional time) when creating or editing tasks.
+### 1. Due Dates
 
-Due dates are displayed directly under each task.
+* Added optional due dates (with optional time) when creating or editing tasks
+* Due dates are displayed directly under each task
+* Overdue tasks are automatically highlighted in **red**, while upcoming dates appear in neutral gray
+* Overdue detection correctly accounts for both date **and** time
 
-Overdue tasks are automatically highlighted in red, while upcoming dates appear in neutral gray.
+---
 
-Overdue detection correctly accounts for both date and time.
+### 2. Image Generation
 
-2. Image Generation
+* Integrated the **Pexels API** to automatically fetch a relevant image based on the task description
+* Images are stored per task and displayed inline in the task card
+* A skeleton loading state is shown while images load, with a smooth fade-in transition
+* Graceful fallback if no image is found or the API request fails
 
-Integrated the Pexels API to automatically fetch a relevant image based on the task description.
+---
 
-Images are stored per task and displayed inline in the task card.
+### 3. Task Dependencies & Critical Path
 
-A skeleton loading state is shown while images load, with a smooth fade-in transition.
+* Implemented a full dependency system allowing:
 
-Graceful fallback if no image is found or the API fails.
+  * Multiple dependencies per task
+  * Four dependency types:
 
-3. Task Dependencies & Critical Path
+    * Finish-to-Start (FS)
+    * Start-to-Start (SS)
+    * Finish-to-Finish (FF)
+    * Start-to-Finish (SF)
+  
+* Circular dependencies are prevented using DFS-based cycle detection
+* Added **Critical Path Method (CPM)** computation:
 
-Implemented a full dependency system allowing:
+  * Calculates earliest start dates based on dependency chains
+  * Identifies tasks on the critical path using slack analysis
+  * Critical tasks are visually highlighted
+* Included a toggleable **dependency graph view** to visualize task relationships and critical paths
 
-Multiple dependencies per task
+---
 
-Four dependency types: Finish-to-Start (FS), Start-to-Start (SS), Finish-to-Finish (FF), Start-to-Finish (SF)
+### 4. Task Editing & UX Improvements
 
-Circular dependencies are prevented using DFS-based cycle detection.
+* Added a full **edit task** flow (title, due date, time, duration) without breaking dependencies or images
+* Dependency labels were restyled for improved readability and contrast
+* Clear action buttons per task:
 
-Added Critical Path Method (CPM) computation:
+  * Edit
+  * Manage dependencies
+  * Delete
+* All updates automatically recalculate the critical path to keep scheduling accurate
 
-Calculates earliest start dates based on dependency chains
+---
 
-Identifies tasks on the critical path using slack analysis
+### Tech Notes
 
-Critical tasks are visually highlighted
+* **Backend:** Next.js API routes, Prisma, SQLite
+* **Frontend:** Next.js (App Router), React, Tailwind CSS
+* **Data integrity** enforced at both API and UI levels
+* **Minimal design changes** to stay consistent with the original UI
 
-Included a toggleable dependency graph view to visualize task relationships and critical paths.
+---
 
-4. Task Editing & UX Improvements
+### Screenshots / Demo
 
-Added a full edit task flow (title, due date, time, duration) without breaking dependencies or images.
+*Add screenshots or a short screen recording here showing:*
 
-Dependency labels were restyled for improved readability and contrast.
+* Task creation with due dates and images
+* Dependency setup
+* Critical path highlighting
+* Dependency graph view
 
-Clear action buttons per task:
+---
 
-Edit
+If you want, I can also:
 
-Manage dependencies
+* Compress this into a **shorter recruiter skim version**
+* Add a **TL;DR section at the top**
+* Help you choose **what screenshots to include** so it looks polished
 
-Delete
-
-All updates automatically recalculate the critical path to keep scheduling accurate.
+You’re in great shape for submission — this reads clean and professional.
