@@ -55,3 +55,59 @@ Implement a task dependency system that allows tasks to depend on other tasks. T
 Thanks for your time and effort. We'll be in touch soon!
 
 ## Solution:
+
+1. Due Dates
+
+Added optional due dates (with optional time) when creating or editing tasks.
+
+Due dates are displayed directly under each task.
+
+Overdue tasks are automatically highlighted in red, while upcoming dates appear in neutral gray.
+
+Overdue detection correctly accounts for both date and time.
+
+2. Image Generation
+
+Integrated the Pexels API to automatically fetch a relevant image based on the task description.
+
+Images are stored per task and displayed inline in the task card.
+
+A skeleton loading state is shown while images load, with a smooth fade-in transition.
+
+Graceful fallback if no image is found or the API fails.
+
+3. Task Dependencies & Critical Path
+
+Implemented a full dependency system allowing:
+
+Multiple dependencies per task
+
+Four dependency types: Finish-to-Start (FS), Start-to-Start (SS), Finish-to-Finish (FF), Start-to-Finish (SF)
+
+Circular dependencies are prevented using DFS-based cycle detection.
+
+Added Critical Path Method (CPM) computation:
+
+Calculates earliest start dates based on dependency chains
+
+Identifies tasks on the critical path using slack analysis
+
+Critical tasks are visually highlighted
+
+Included a toggleable dependency graph view to visualize task relationships and critical paths.
+
+4. Task Editing & UX Improvements
+
+Added a full edit task flow (title, due date, time, duration) without breaking dependencies or images.
+
+Dependency labels were restyled for improved readability and contrast.
+
+Clear action buttons per task:
+
+Edit
+
+Manage dependencies
+
+Delete
+
+All updates automatically recalculate the critical path to keep scheduling accurate.
