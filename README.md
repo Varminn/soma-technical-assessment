@@ -113,3 +113,6 @@ Thanks for your time and effort. We'll be in touch soon!
 
 ### Screenshots / Demo
 
+<img width="973" height="608" alt="Screenshot 2025-12-31 at 6 04 44 PM" src="https://github.com/user-attachments/assets/1f731799-1e79-4bce-a3ff-10c612a21e57" />
+
+
